@@ -1,6 +1,6 @@
 {
   "name": "fis3-spriter-fontmin",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "a plugin for fis3, use fontmin to generate dynamic font files",
   "main": "index.js",
   "scripts": {
