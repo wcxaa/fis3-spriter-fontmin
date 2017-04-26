@@ -66,7 +66,8 @@ function dealOneRule(rule, ret) {
 			files.forEach(function(f, index) {
 				var subpath = f.history[f.history.length - 1].replace(f.cwd, '');
 				var subpathFile = fis.file(root, subpath);
-				var release = releaseDir ? releaseDir + '/' + file.filename + subpathFile.ext : subpathFile.subpath.replace(subpathFile.filename, file.filename);
+				var filename = file.filename + '_' + fontFamily;
+				var release = releaseDir ? releaseDir + '/' + filename + subpathFile.ext : subpathFile.subpath.replace(subpathFile.filename, filename);
 
 				var pkg = fis.file(root, release);
 
