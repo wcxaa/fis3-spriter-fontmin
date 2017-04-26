@@ -1,0 +1,25 @@
+{
+  "name": "fis3-spriter-fontmin",
+  "version": "0.1.0",
+  "description": "a plugin for fis3, use fontmin to generate dynamic font files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wcxaa/fis3-spriter-fontmin.git"
+  },
+  "keywords": [
+    "fis3",
+    "fontmin"
+  ],
+  "author": "WangChengXi",
+  "license": "MIT",
+  "homepage": "https://github.com/wcxaa/fis3-spriter-fontmin#readme",
+  "dependencies": {
+    "deasync": "^0.1.9",
+    "fontmin": "^0.9.6",
+    "minimatch": "^3.0.3"
+  }
+}
