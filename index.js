@@ -70,7 +70,9 @@ function dealOneRule(rule, ret) {
 				var release = releaseDir ? releaseDir + '/' + filename + subpathFile.ext : subpathFile.subpath.replace(subpathFile.filename, filename);
 
 				var pkg = fis.file(root, release);
-
+				if (rule.useHash) {
+					pkg.useHash = true;
+				}
 				pkg.setContent(f._contents);
 
 				ret.pkg[pkg.subpath] = pkg;

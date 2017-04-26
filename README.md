@@ -34,6 +34,8 @@ fis.match('::package', {
 			},
 			// 是否过滤text,只得到text中的中文
             chineseOnly: true,
+            // 查看fis.file中的useHash 默认为false
+            useHash: true,
 			// 用来设置css,来插入到match到的文件中
 			css: {
 				fontFamily: 'SentyTang', // 默认为baseFile的文件名
