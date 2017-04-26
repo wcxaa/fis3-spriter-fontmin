@@ -17,7 +17,7 @@ module.exports = function(ret, conf, settings, opt) {
 
 function dealOneRule(rule, ret) {
 	fis.util.map(ret.src, function(subpath, file) {
-		if (!file.isHtmlLike || !minimatch(file.realpath, fis.project.getProjectPath(rule.match))) {
+		if (file._fromCache || !file.isHtmlLike || !minimatch(file.realpath, fis.project.getProjectPath(rule.match))) {
 			return;
 		}
 
