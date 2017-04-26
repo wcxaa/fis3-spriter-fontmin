@@ -13,11 +13,13 @@ a plugin for fis3, use fontmin to generate dynamic font files.
 
 ## 用法
 
-`npm install --save-dev fis3-spriter-fontmin`
+```bash
+npm install --save-dev fis3-spriter-fontmin
+```
 
 fis-config.js配置:
 
-~~~
+```js
 fis.match('::package', {
     spriter: fis.plugin('fontmin', {
         // rules为数组，可设置多个rule,生成多个对应字体
@@ -45,8 +47,7 @@ fis.match('::package', {
         }]
     })
 });
-
-~~~
+```
 
 [downloads-image]: http://img.shields.io/npm/dm/fis3-spriter-fontmin.svg
 [npm-url]: https://npmjs.org/package/fis3-spriter-fontmin
