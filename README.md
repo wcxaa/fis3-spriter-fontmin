@@ -13,7 +13,7 @@ a plugin for fis3, use fontmin to generate dynamic font files.
 
 ## 用法
 
-```bash
+```
 npm install --save-dev fis3-spriter-fontmin
 ```
 
@@ -23,27 +23,27 @@ fis-config.js配置:
 fis.match('::package', {
     spriter: fis.plugin('fontmin', {
         // rules为数组，可设置多个rule,生成多个对应字体
-		rules: [{
-			// 必须设置，否则无效 设置将要应用此插件的文件，未设置的文件将被忽略
+        rules: [{
+            // 必须设置，否则无效 设置将要应用此插件的文件，未设置的文件将被忽略
             match: 'pages/*.php',
-			// 必须设置，否则报错 源ttf字体文件 该插件根据这个ttf字体文件生成相应压缩字体文件
+            // 必须设置，否则报错 源ttf字体文件 该插件根据这个ttf字体文件生成相应压缩字体文件
             baseFile: 'css/fonts/SentyTang.ttf',
-			// 默认为baseFile的目录（例如：'css/fonts'）
-			releaseDir: 'css/fonts',
-			// 根据text来生成压缩的字体文件，默认为match到的文件的所有内容，text也可设置为string类型，如text: 'aaa'
-			text: function(content,file) {
-				return content;
-			},
-			// 是否过滤text,只得到text中的中文
+            // 默认为baseFile的目录（例如：'css/fonts'）
+            releaseDir: 'css/fonts',
+            // 根据text来生成压缩的字体文件，默认为match到的文件的所有内容，text也可设置为string类型，如text: 'aaa'
+            text: function(content,file) {
+                return content;
+            },
+            // 是否过滤text,只得到text中的中文
             chineseOnly: true,
             // 查看fis.file中的useHash 默认为false
             useHash: true,
-			// 用来设置css,来插入到match到的文件中
-			css: {
-				fontFamily: 'SentyTang', // 默认为baseFile的文件名
-				fontStyle: italic, // 默认为normal
-				fontWeight: 200 // 默认为normal
-			}
+            // 用来设置css,来插入到match到的文件中
+            css: {
+                fontFamily: 'SentyTang', // 默认为baseFile的文件名
+                fontStyle: italic, // 默认为normal
+                fontWeight: 200 // 默认为normal
+            }
         }]
     })
 });
